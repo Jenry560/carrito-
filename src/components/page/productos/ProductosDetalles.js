@@ -15,7 +15,6 @@ export const ProductosDetalles = () => {
 
   useEffect(() =>{
     console.log('re render' , params.id)
-    item=0;
     productos.forEach(producto =>{
       if(producto.id === parseInt(params.id)){
         setDetalle(producto)
@@ -31,10 +30,7 @@ export const ProductosDetalles = () => {
     setImages(values) 
   },[url, params.id])
 
-  const handleInput = (e) =>{
-  const number = e.target.value.toString().padStart(2,'01')
-   setUrl(number)
-  }
+
 
   if(detalle.length < 1) return null;
 
@@ -87,7 +83,7 @@ export const ProductosDetalles = () => {
           />
           }
           
-        
+          return null;
         })
       }
      
