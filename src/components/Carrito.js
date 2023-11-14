@@ -49,7 +49,7 @@ export const Carrito = () => {
     <div className={show1}>
       <div className={show2}>
         <div onClick={tooglefalse} className="carrito__close">
-          <box-icon name="x"></box-icon>
+          <box-icon name="x"/>
         </div>
         <h2>Su Carrito</h2>
         <div className="carrito__center">
@@ -61,11 +61,12 @@ export const Carrito = () => {
 					carrito.map((producto) => (
             <div className="carrito__item" key={producto.id}>
               <img src={producto.image} alt={producto.title} />
-              <div>
+              <div style={{marginLeft: "9px"}}>
                 <h3> {producto.title} </h3>
                 <p className="price">${producto.price}</p>
-              </div>
-              <div>
+				<div className="ajuste">
+				<div>
+				
 								<box-icon 
 									onClick={() => increase(producto.id)} name="up-arrow" 
 									type="solid"
@@ -81,8 +82,11 @@ export const Carrito = () => {
 							onClick={() => removeProducto(producto.id)} 
 							className="remove__item"
 							>
-                <box-icon name="trash" />
+                <box-icon name="trash" id="trash"/>
               </div>
+			  </div>
+              </div>
+           
             </div>
 					))
 				};

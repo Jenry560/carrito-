@@ -26,7 +26,7 @@ code {
     min-height: 100vh;
     margin: auto;
     box-shadow: 0 2px 6px #08a05ca4;;
-    padding: 0 15px;
+
     box-sizing: border-box;
 
 }
@@ -46,13 +46,15 @@ code {
 
 /* ----------------- HEADER -------------------*/
 header{
-    width: 97%;
-    min-height: 100px;
+    margin: auto;
+    width: 100%;
+    min-height: 90px;
     max-width:1530px;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
     flex-wrap: wrap;
     position: fixed;
     box-sizing: border-box ;
@@ -67,20 +69,21 @@ a{
 a:hover{
     color: #08a05c;
 }
-.menu{
-    display: none;
-}
+
+
 li{
     list-style: none;
 }
 
 header ul{
+    text-align: center;
     display: flex;
     padding: 0;
     margin: 0;
 }
 header ul li{
     padding: 0 1rem;
+    text-align: center;
 }
 header ul li a{
     font-weight: bold;
@@ -129,7 +132,7 @@ header ul li a{
     box-sizing: border-box ;
 } 
 .producto{
-    
+   
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -207,6 +210,7 @@ header ul li a{
 }
 /*-----------------CARRITO -----------*/
 .carritos{
+    
     position: fixed;
     top: 0;
     left: 0;
@@ -219,6 +223,7 @@ header ul li a{
     visibility: hidden;
 }
 .carrito{
+    
     position: fixed;
     top: 50%;
     left: 50%;
@@ -262,12 +267,17 @@ header ul li a{
     margin: 0 auto;
 }
 .carrito__item{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
     margin: 2rem auto;
     box-shadow: 0 1px 10px saddlebrown;
     border-radius: 5px;
+}
+.ajuste{
+    flex-direction: row !important;
+
 }
 .carrito__item div{
     display: flex;
@@ -275,6 +285,7 @@ header ul li a{
     align-items: center;
 }
 .carrito__item img{
+    margin-top: 10px;
     width: 10rem;
 }
 .carrito__item h3{
@@ -303,9 +314,8 @@ header ul li a{
 }
 .carrito__item .remove__item box-icon{
     width: 60px;
-    height: 80px;
     fill:  crimson;
-    margin-top: 2rem;
+    margin-left: 15px;
 }
 .carrito__footer{
     text-align: center;
@@ -331,10 +341,15 @@ header ul li a{
 }
 /*--------------DETALLES --------------*/
 .detalles{
+    margin: auto;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 90%;
     padding: 13rem 1rem 0 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     box-sizing: border-box;
 }
 .detalles h2{
@@ -394,12 +409,14 @@ header ul li a{
     cursor: pointer;
 }
 .detalles img{
+  
     min-height: 300px;
     object-fit: contain;
-    margin-top:  -7rem;
-    z-index: -1;
+    border-radius: 30px;
+  
 }
 .detalles input{
+   
     max-width: 700px;
     margin: 0 auto;
     width: 100%;
@@ -411,7 +428,7 @@ header ul li a{
     width: 100%;
     letter-spacing: 1px;
     color: #5f5d5d;
-    margin: 10px 0 auto;
+    margin: 20px 0 auto;
     font-weight: 500;
 }
 .detalles .description b{
@@ -423,12 +440,13 @@ header ul li a{
 
 /* ------------- RELACIONADO --------- */
 .relacionados{
+    margin: 20px auto;
     text-align: center;
     background-color: #2e2e2e;
     color: white;
     max-width: 350px;
     width: 100%;
-    margin: 5rem auto -2rem auto;
+  
     padding: .5rem 1rem;
     font-size: 18px;
     letter-spacing: 3px;
@@ -441,13 +459,30 @@ header ul li a{
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding-bottom: 130px;
+    padding-bottom: 30px;
 }
+
 
 /* -------------MEDIA -------------*/
 @media only screen and (max-width: 1000px){
+    .producto{
+        width: 90%;
+        margin: auto;
+    }
+    
+    .carrito__item .remove__item box-icon{
+        width: 35px;      
+    }
     .carrito__item{
-        width: 92%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .carrito h2{
+        text-align: center;
+        font-size: 1rem;
     }
 }
 @media only screen and (max-width: 888px){ 
@@ -496,6 +531,7 @@ header ul li a{
     }
 }
 @media only screen and (max-width: 450px){
+    
     .carrito__item h3{
         font-size: .8rem;
        
