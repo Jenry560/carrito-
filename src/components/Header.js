@@ -1,33 +1,29 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { DataContext } from "context/DataProvider";
 import { Link } from "react-router-dom";
 import logo from "images/Sinfondo.png";
-
 
 export const Header = () => {
   const value = useContext(DataContext);
   const [carrito] = value.carrito;
   const [menu, setMenu] = value.menu;
 
-
-  const toogleMenu = () =>{
-    setMenu(!menu)
-  }
- 
+  const toogleMenu = () => {
+    setMenu(!menu);
+  };
 
   return (
     <header>
       <Link to="/">
-      <div className="logo">
-        <img src={logo} alt="logo" width="150" />
-      </div>
+        <div className="logo">
+          <img src={logo} alt="logo" width="130" />
+        </div>
       </Link>
       <ul>
         <li>
-          <Link to="/">INICIO</Link>
-        </li>
-        <li>
-          <Link to="/productos">PRODUCTOS</Link>
+          <Link to="/" className="home_link">
+            HOME
+          </Link>
         </li>
       </ul>
       <div className="cart" onClick={toogleMenu}>
