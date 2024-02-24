@@ -40,6 +40,8 @@ code {
   width: 100%;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation: animationOpacity 1s ease forwards;
 }
 .sec_portada_1 {
   display: flex;
@@ -200,7 +202,7 @@ header ul li a {
 .produ {
   text-align: center;
   font-size: 3.5rem;
-
+  animation: animationOpacity 1s ease forwards;
   color: white;
   font-family: "Crimson Pro", serif;
   font-optical-sizing: auto;
@@ -225,6 +227,7 @@ header ul li a {
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  animation: animationOpacity 1s ease forwards;
 }
 .producto {
   background-color: white;
@@ -461,6 +464,7 @@ header ul li a {
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  animation: animationOpacity 1s ease forwards;
 }
 .detalles h2 {
   font-size: 3.5rem;
@@ -729,5 +733,13 @@ header ul li a {
 @media (min-width: 900px) and (max-width: 1200px) and (max-height: 941px) {
   .sec_portada_2 img {
     display: none;
+  }
+}
+@keyframes animationOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
