@@ -167,7 +167,9 @@ header ul li {
 header ul li a {
   font-weight: bold;
 }
-
+.logo img {
+  width: 120px;
+}
 .cart {
   position: relative;
   cursor: pointer;
@@ -651,6 +653,24 @@ header ul li a {
 }
 
 @media screen and (max-width: 570px) {
+  .inicio {
+    padding-top: 7rem;
+  }
+  header {
+    height: 75px;
+  }
+  .logo img {
+    width: 90px;
+  }
+  .cart span {
+    right: -1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .cart box-icon {
+    width: 30px;
+    height: 30px;
+  }
   header ul {
     display: none;
   }
