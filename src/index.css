@@ -111,12 +111,12 @@ code {
 }
 .wave1 {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .wave2 {
   z-index: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 10px;
 }
